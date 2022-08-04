@@ -4,12 +4,13 @@ import { params } from '../hooks/data';
 
 export const Card = () => {
 
+    // I call the data using a custom hook.
     const [ data ] = useFetch();
 
     return (
         <div className='p-4 w-full '>
             <div className='flex flex-wrap justify-around'>
-                {
+                {   // Here i use .map to to loop through the array and display the information and create as many cards as needed
                     data.map((item, index) => (
                         <div key={index} className='bg-gray-100 rounded-3xl w-80 h-48 m-2 flex items-center justify-center'>
                             {item.hostname ? (

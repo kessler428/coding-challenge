@@ -1,10 +1,12 @@
 import React from "react";
-import { Index } from "./pages/Index.jsx";
+import { Card } from "./components/Card.jsx";
+import { Header } from "./components/Header.jsx";
 
 export const App = () => {
   return (
     <>
-      <Index />
+      <Header />
+      <Card />
     </>
   );
 };

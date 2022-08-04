@@ -1,3 +1,5 @@
+// I've created this array to recognized the information of the each card
+
 export const params = [
     {
         name: 'ACCOUNTS'

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 
 export const useFetch = () => {
+
+    // The states of the data
     const [data, setData] = useState([])
 
     const [accounts, setAccounts] = useState('')
@@ -21,6 +23,8 @@ export const useFetch = () => {
     const [templates, setTemplates] = useState('')
     const [users, setUsers] = useState('')
     const [workflows, setWorkflows] = useState('')
+
+    // In this useEffect we call all the apis to get the information
 
     useEffect(() => {
         fetch(`https://api.factoryfour.com/accounts/health/status`)
@@ -108,6 +112,8 @@ export const useFetch = () => {
             
     }, [])
 
+    //This use Effect is used to set de data in the state of data using setData.
+
     useEffect(() => {
         setData([
             accounts, 
@@ -150,12 +156,14 @@ export const useFetch = () => {
         workflows,
     ])
 
+    // In this useEffect we can change the time to render the data
     useEffect(() => {
         setTimeout(() => {
             setData(data)
         }, 15000);
     },[data])
 
+    // Here we send the data to use it in any place of the project
     return [
         data
     ]
