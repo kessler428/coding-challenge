@@ -14,6 +14,9 @@ export const params = [
         name: 'DATAPOINTS'
     },
     {
+        name: 'DEVICES'
+    },
+    {
         name: 'DOCUMENTS'
     },
     {
